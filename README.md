@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Game state is an object stored in Redux. This object will have all of the properties that manage the game. Here is a list of all properties with a short description.
+    grid : (Array) nested array describing the game board
+    shape : (Int) index of current shape block controlled by player
+    rotation : (Int) rotation index of the current shape block
+    x : (Int) horizontal position of the current shape block on the game board
+    y : (Int) vertical position of the current shape block
+    nextShape : (Int) index of the next shape to play
+    isRunning : (Bool) true when game is running, false when paused
+    score : (Int) number of points scored
+    speed : (Int) speed of falling blocks
+    gameOver : (Bool) true when game is over
+
+
 ## Available Scripts
 
 In the project directory, you can run:
