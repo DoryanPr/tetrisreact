@@ -7,6 +7,7 @@ import MessagePopup from "./components/MessagePopup";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import reducers from "./reducers";
+import ScoreList from "./components/ScoreList";
 
 const store = createStore(reducers)
 
@@ -22,6 +23,8 @@ function App() {
                 <ScoreBoard/>
                 <Controls/>
                 <MessagePopup/>
+
+                <ScoreList />
             </div>
         </Provider>
     );
