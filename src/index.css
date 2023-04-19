@@ -77,6 +77,15 @@
 
 /* App */
 .App {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+}
+
+.tetris {
     --col-side: calc(var(--tile-size) * 4);
     --col-center: calc(var(--tile-size) * 10);
     --grid-height: calc(var(--tile-size) * 18);
@@ -91,7 +100,7 @@
 
     grid-template-areas: "h h h"
                        "l c r"
-                       ". b .";
+                       "f b x";
 }
 
 .App-header {
@@ -189,5 +198,11 @@
 
 .ranking .score {
     font-weight: 600;
+}
+
+.ranking .avatar {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
 }
 

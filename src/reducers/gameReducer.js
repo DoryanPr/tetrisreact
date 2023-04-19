@@ -1,5 +1,5 @@
 import {GAME_OVER, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, PAUSE, RESTART, RESUME, ROTATE} from "../actions";
-import {addBlockToGrid, canMoveTo, checkRows, defaultState, nextRotation, randomShape} from "../utils/index";
+import {addBlockToGrid, canMoveTo, checkRows, defaultState, nextRotation} from "../utils/index";
 
 const gameReducer = (state = defaultState(), action) => {
     const { shape, grid, x, y, rotation, nextShape, score, isRunning } = state

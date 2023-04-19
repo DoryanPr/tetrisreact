@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const shapes = [
     // none
     [[[0, 0, 0, 0],

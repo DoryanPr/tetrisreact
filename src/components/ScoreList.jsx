@@ -9,23 +9,27 @@ export default function ScoreList() {
 
     useEffect(() => {
         axios
-            .get(`https://tetris-symfo.sf4.p81.dbm-local.com/api/score`)
+            .get(`https://tetris-symfo.sf4.p81.dbm-local.com/api/resultat`)
             .then((res) => {
                 const sortedData = res.data.data.sort((a, b) => parseInt(b.result) - parseInt(a.result));
                 setList(sortedData)
-                console.log('res', res)
             })
     }, []);
-
-    console.log('list', list)
 
     return (
         <div className={'ranking'}>
             {
-                list?.map(res => {
+                list?.map((res, key) => {
                     return (
-                        <div>
-                            <span className={'score'}>{res.result}</span> - {res.name ? res.name : "Anonyme"}
+                        <div key={key}>
+
+                            <span className={'score'}>{res.score}</span> - {res.pseudo ? res.pseudo : "Anonyme"}
+
+                            {
+                                res.image && (
+                                    <img src={`https://tetris-symfo.sf4.p81.dbm-local.com/uploads/avatar/${res.image}`} className={'avatar'} alt=""/>
+                                )
+                            }
                         </div>
                     )
                 })
